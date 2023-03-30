@@ -1,0 +1,27 @@
+{
+
+  "name": "my-telegram-bot",
+
+  "version": "1.0.0",
+
+  "description": "My Telegram Bot",
+
+  "main": "index.js",
+
+  "dependencies": {
+
+    "telegraf": "^4.4.2"
+
+  },
+
+  "scripts": {
+
+    "start": "node index.js"
+
+  },
+
+  "author": "Your Name",
+
+  "license": "ISC"
+
+}
