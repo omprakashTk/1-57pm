@@ -1,8 +1,8 @@
 const axios = require('axios');
 
-const Telegraf = require('Telegraf');
+const Telegraf = require('telegraf');
 
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
+const bot = new telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
 const query = 'tornadonotes+filename:txt+updated:>2022-01-01';
 
