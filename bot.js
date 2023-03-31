@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const Telegraf = require('telegraf');
+const Telegraf = require('Telegraf');
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
