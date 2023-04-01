@@ -1,368 +1,492 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+## [1.3.4](https://github.com/axios/axios/compare/v1.3.3...v1.3.4) (2023-02-22)
 
-## [Unreleased](https://github.com/motdotla/dotenv/compare/v16.0.3...master)
 
-## [16.0.3](https://github.com/motdotla/dotenv/compare/v16.0.2...v16.0.3) (2022-09-29)
+### Bug Fixes
+
+* **blob:** added a check to make sure the Blob class is available in the browser's global scope; ([#5548](https://github.com/axios/axios/issues/5548)) ([3772c8f](https://github.com/axios/axios/commit/3772c8fe74112a56e3e9551f894d899bc3a9443a))
+* **http:** fixed regression bug when handling synchronous errors inside the adapter; ([#5564](https://github.com/axios/axios/issues/5564)) ([a3b246c](https://github.com/axios/axios/commit/a3b246c9de5c3bc4b5a742e15add55b375479451))
+
+### Contributors to this release
+
+- <img src="https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+38/-26 (#5564 )")
+- <img src="https://avatars.githubusercontent.com/u/19550000?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [lcysgsg](https://github.com/lcysgsg "+4/-0 (#5548 )")
+- <img src="https://avatars.githubusercontent.com/u/5492927?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [Michael Di Prisco](https://github.com/Cadienvan "+3/-0 (#5444 )")
+
+## [1.3.3](https://github.com/axios/axios/compare/v1.3.2...v1.3.3) (2023-02-13)
+
+
+### Bug Fixes
+
+* **formdata:** added a check to make sure the FormData class is available in the browser's global scope; ([#5545](https://github.com/axios/axios/issues/5545)) ([a6dfa72](https://github.com/axios/axios/commit/a6dfa72010db5ad52db8bd13c0f98e537e8fd05d))
+* **formdata:** fixed setting NaN as Content-Length for form payload in some cases; ([#5535](https://github.com/axios/axios/issues/5535)) ([c19f7bf](https://github.com/axios/axios/commit/c19f7bf770f90ae8307f4ea3104f227056912da1))
+* **headers:** fixed the filtering logic of the clear method; ([#5542](https://github.com/axios/axios/issues/5542)) ([ea87ebf](https://github.com/axios/axios/commit/ea87ebfe6d1699af072b9e7cd40faf8f14b0ab93))
+
+### Contributors to this release
+
+- <img src="https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+11/-7 (#5545 #5535 #5542 )")
+- <img src="https://avatars.githubusercontent.com/u/19842213?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [陈若枫](https://github.com/ruofee "+2/-2 (#5467 )")
+
+## [1.3.2](https://github.com/axios/axios/compare/v1.3.1...v1.3.2) (2023-02-03)
+
+
+### Bug Fixes
+
+* **http:** treat http://localhost as base URL for relative paths to avoid `ERR_INVALID_URL` error; ([#5528](https://github.com/axios/axios/issues/5528)) ([128d56f](https://github.com/axios/axios/commit/128d56f4a0fb8f5f2ed6e0dd80bc9225fee9538c))
+* **http:** use explicit import instead of TextEncoder global; ([#5530](https://github.com/axios/axios/issues/5530)) ([6b3c305](https://github.com/axios/axios/commit/6b3c305fc40c56428e0afabedc6f4d29c2830f6f))
+
+### Contributors to this release
+
+- <img src="https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+2/-1 (#5530 #5528 )")
+
+## [1.3.1](https://github.com/axios/axios/compare/v1.3.0...v1.3.1) (2023-02-01)
+
+
+### Bug Fixes
+
+* **formdata:** add hotfix to use the asynchronous API to compute the content-length header value; ([#5521](https://github.com/axios/axios/issues/5521)) ([96d336f](https://github.com/axios/axios/commit/96d336f527619f21da012fe1f117eeb53e5a2120))
+* **serializer:** fixed serialization of array-like objects; ([#5518](https://github.com/axios/axios/issues/5518)) ([08104c0](https://github.com/axios/axios/commit/08104c028c0f9353897b1b6691d74c440fd0c32d))
+
+### Contributors to this release
+
+- <img src="https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+27/-8 (#5521 #5518 )")
+
+# [1.3.0](https://github.com/axios/axios/compare/v1.2.6...v1.3.0) (2023-01-31)
+
+
+### Bug Fixes
+
+* **headers:** fixed & optimized clear method; ([#5507](https://github.com/axios/axios/issues/5507)) ([9915635](https://github.com/axios/axios/commit/9915635c69d0ab70daca5738488421f67ca60959))
+* **http:** add zlib headers if missing ([#5497](https://github.com/axios/axios/issues/5497)) ([65e8d1e](https://github.com/axios/axios/commit/65e8d1e28ce829f47a837e45129730e541950d3c))
+
+
+### Features
+
+* **fomdata:** added support for spec-compliant FormData & Blob types; ([#5316](https://github.com/axios/axios/issues/5316)) ([6ac574e](https://github.com/axios/axios/commit/6ac574e00a06731288347acea1e8246091196953))
+
+### Contributors to this release
+
+- <img src="https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+352/-67 (#5514 #5512 #5510 #5509 #5508 #5316 #5507 )")
+- <img src="https://avatars.githubusercontent.com/u/35015993?v&#x3D;4&amp;s&#x3D;18" alt="avatar" width="18"/> [ItsNotGoodName](https://github.com/ItsNotGoodName "+43/-2 (#5497 )")
+
+## [1.2.6](https://github.com/axios/axios/compare/v1.2.5...v1.2.6) (2023-01-28)
+
+
+### Bug Fixes
+
+* **headers:** added missed Authorization accessor; ([#5502](https://github.com/axios/axios/issues/5502)) ([342c0ba](https://github.com/axios/axios/commit/342c0ba9a16ea50f5ed7d2366c5c1a2c877e3f26))
+* **types:** fixed `CommonRequestHeadersList` & `CommonResponseHeadersList` types to be private in commonJS; ([#5503](https://github.com/axios/axios/issues/5503)) ([5a3d0a3](https://github.com/axios/axios/commit/5a3d0a3234d77361a1bc7cedee2da1e11df08e2c))
+
+### Contributors to this release
+
+- ![avatar](https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;16) [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+24/-9 (#5503 #5502 )")
+
+## [1.2.5](https://github.com/axios/axios/compare/v1.2.4...v1.2.5) (2023-01-26)
+
+
+### Bug Fixes
+
+* **types:** fixed AxiosHeaders to handle spread syntax by making all methods non-enumerable; ([#5499](https://github.com/axios/axios/issues/5499)) ([580f1e8](https://github.com/axios/axios/commit/580f1e8033a61baa38149d59fd16019de3932c22))
+
+### Contributors to this release
+
+- ![avatar](https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;16) [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+82/-54 (#5499 )")
+- ![avatar](https://avatars.githubusercontent.com/u/20516159?v&#x3D;4&amp;s&#x3D;16) [Elliot Ford](https://github.com/EFord36 "+1/-1 (#5462 )")
+
+## [1.2.4](https://github.com/axios/axios/compare/v1.2.3...v1.2.4) (2023-01-22)
+
+
+### Bug Fixes
+
+* **types:** renamed `RawAxiosRequestConfig` back to `AxiosRequestConfig`; ([#5486](https://github.com/axios/axios/issues/5486)) ([2a71f49](https://github.com/axios/axios/commit/2a71f49bc6c68495fa419003a3107ed8bd703ad0))
+* **types:** fix `AxiosRequestConfig` generic; ([#5478](https://github.com/axios/axios/issues/5478)) ([9bce81b](https://github.com/axios/axios/commit/186ea062da8b7d578ae78b1a5c220986b9bce81b))
+
+### Contributors to this release
+
+- ![avatar](https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;16) [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+242/-108 (#5486 #5482 )")
+- ![avatar](https://avatars.githubusercontent.com/u/9430821?v&#x3D;4&amp;s&#x3D;16) [Daniel Hillmann](https://github.com/hilleer "+1/-1 (#5478 )")
+
+## [1.2.3](https://github.com/axios/axios/compare/1.2.2...1.2.3) (2023-01-10)
+
+
+### Bug Fixes
+
+* **types:** fixed AxiosRequestConfig header interface by refactoring it to RawAxiosRequestConfig; ([#5420](https://github.com/axios/axios/issues/5420)) ([0811963](https://github.com/axios/axios/commit/08119634a22f1d5b19f5c9ea0adccb6d3eebc3bc))
+
+### Contributors to this release
+
+- ![avatar](https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;16) [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS "+938/-442 (#5456 #5455 #5453 #5451 #5449 #5447 #5446 #5443 #5442 #5439 #5420 )")
+
+## [1.2.2] - 2022-12-29
+
+### Fixed
+- fix(ci): fix release script inputs [#5392](https://github.com/axios/axios/pull/5392)
+- fix(ci): prerelease scipts [#5377](https://github.com/axios/axios/pull/5377)
+- fix(ci): release scripts [#5376](https://github.com/axios/axios/pull/5376)
+- fix(ci): typescript tests [#5375](https://github.com/axios/axios/pull/5375)
+- fix: Brotli decompression [#5353](https://github.com/axios/axios/pull/5353)
+- fix: add missing HttpStatusCode [#5345](https://github.com/axios/axios/pull/5345)
+
+### Chores
+- chore(ci): set conventional-changelog header config [#5406](https://github.com/axios/axios/pull/5406)
+- chore(ci): fix automatic contributors resolving [#5403](https://github.com/axios/axios/pull/5403)
+- chore(ci): improved logging for the contributors list generator [#5398](https://github.com/axios/axios/pull/5398)
+- chore(ci): fix release action [#5397](https://github.com/axios/axios/pull/5397)
+- chore(ci): fix version bump script by adding bump argument for target version [#5393](https://github.com/axios/axios/pull/5393)
+- chore(deps): bump decode-uri-component from 0.2.0 to 0.2.2 [#5342](https://github.com/axios/axios/pull/5342)
+- chore(ci): GitHub Actions Release script [#5384](https://github.com/axios/axios/pull/5384)
+- chore(ci): release scripts [#5364](https://github.com/axios/axios/pull/5364)
+
+### Contributors to this release
+- ![avatar](https://avatars.githubusercontent.com/u/12586868?v&#x3D;4&amp;s&#x3D;16) [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS)
+- ![avatar](https://avatars.githubusercontent.com/u/1652293?v&#x3D;4&amp;s&#x3D;16) [Winnie](https://github.com/winniehell)
+
+## [1.2.1] - 2022-12-05
+
+### Changed
+- feat(exports): export mergeConfig [#5151](https://github.com/axios/axios/pull/5151)
+
+### Fixed
+- fix(CancelledError): include config [#4922](https://github.com/axios/axios/pull/4922)
+- fix(general): removing multiple/trailing/leading whitespace [#5022](https://github.com/axios/axios/pull/5022)
+- fix(headers): decompression for responses without Content-Length header [#5306](https://github.com/axios/axios/pull/5306)
+- fix(webWorker): exception to sending form data in web worker [#5139](https://github.com/axios/axios/pull/5139)
+
+### Refactors
+- refactor(types): AxiosProgressEvent.event type to any [#5308](https://github.com/axios/axios/pull/5308)
+- refactor(types): add missing types for static AxiosError.from method [#4956](https://github.com/axios/axios/pull/4956)
+
+### Chores
+- chore(docs): remove README link to non-existent upgrade guide [#5307](https://github.com/axios/axios/pull/5307)
+- chore(docs): typo in issue template name [#5159](https://github.com/axios/axios/pull/5159)
+
+### Contributors to this release
+
+- [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS)
+- [Zachary Lysobey](https://github.com/zachlysobey)
+- [Kevin Ennis](https://github.com/kevincennis)
+- [Philipp Loose](https://github.com/phloose)
+- [secondl1ght](https://github.com/secondl1ght)
+- [wenzheng](https://github.com/0x30)
+- [Ivan Barsukov](https://github.com/ovarn)
+- [Arthur Fiorette](https://github.com/arthurfiorette)
+
+## [1.2.0] - 2022-11-10
 
 ### Changed
 
-- Added library version to debug logs ([#682](https://github.com/motdotla/dotenv/pull/682))
-
-## [16.0.2](https://github.com/motdotla/dotenv/compare/v16.0.1...v16.0.2) (2022-08-30)
-
-### Added
-
-- Export `env-options.js` and `cli-options.js` in package.json for use with downstream [dotenv-expand](https://github.com/motdotla/dotenv-expand) module
-
-## [16.0.1](https://github.com/motdotla/dotenv/compare/v16.0.0...v16.0.1) (2022-05-10)
-
-### Changed
-
-- Minor README clarifications
-- Development ONLY: updated devDependencies as recommended for development only security risks ([#658](https://github.com/motdotla/dotenv/pull/658))
-
-## [16.0.0](https://github.com/motdotla/dotenv/compare/v15.0.1...v16.0.0) (2022-02-02)
-
-### Added
-
-- _Breaking:_ Backtick support 🎉 ([#615](https://github.com/motdotla/dotenv/pull/615))
-
-If you had values containing the backtick character, please quote those values with either single or double quotes.
-
-## [15.0.1](https://github.com/motdotla/dotenv/compare/v15.0.0...v15.0.1) (2022-02-02)
-
-### Changed
-
-- Properly parse empty single or double quoted values 🐞 ([#614](https://github.com/motdotla/dotenv/pull/614))
-
-## [15.0.0](https://github.com/motdotla/dotenv/compare/v14.3.2...v15.0.0) (2022-01-31)
-
-`v15.0.0` is a major new release with some important breaking changes.
-
-### Added
-
-- _Breaking:_ Multiline parsing support (just works. no need for the flag.)
-
-### Changed
-
-- _Breaking:_ `#` marks the beginning of a comment (UNLESS the value is wrapped in quotes. Please update your `.env` files to wrap in quotes any values containing `#`. For example: `SECRET_HASH="something-with-a-#-hash"`).
-
-..Understandably, (as some teams have noted) this is tedious to do across the entire team. To make it less tedious, we recommend using [dotenv cli](https://github.com/dotenv-org/cli) going forward. It's an optional plugin that will keep your `.env` files in sync between machines, environments, or team members.
-
-### Removed
-
-- _Breaking:_ Remove multiline option (just works out of the box now. no need for the flag.)
-
-## [14.3.2](https://github.com/motdotla/dotenv/compare/v14.3.1...v14.3.2) (2022-01-25)
-
-### Changed
-
-- Preserve backwards compatibility on values containing `#` 🐞 ([#603](https://github.com/motdotla/dotenv/pull/603))
-
-## [14.3.1](https://github.com/motdotla/dotenv/compare/v14.3.0...v14.3.1) (2022-01-25)
-
-### Changed
-
-- Preserve backwards compatibility on exports by re-introducing the prior in-place exports 🐞 ([#606](https://github.com/motdotla/dotenv/pull/606))
-
-## [14.3.0](https://github.com/motdotla/dotenv/compare/v14.2.0...v14.3.0) (2022-01-24)
-
-### Added
-
-- Add `multiline` option 🎉 ([#486](https://github.com/motdotla/dotenv/pull/486))
-
-## [14.2.0](https://github.com/motdotla/dotenv/compare/v14.1.1...v14.2.0) (2022-01-17)
-
-### Added
-
-- Add `dotenv_config_override` cli option
-- Add `DOTENV_CONFIG_OVERRIDE` command line env option
-
-## [14.1.1](https://github.com/motdotla/dotenv/compare/v14.1.0...v14.1.1) (2022-01-17)
-
-### Added
-
-- Add React gotcha to FAQ on README
-
-## [14.1.0](https://github.com/motdotla/dotenv/compare/v14.0.1...v14.1.0) (2022-01-17)
-
-### Added
-
-- Add `override` option 🎉 ([#595](https://github.com/motdotla/dotenv/pull/595))
-
-## [14.0.1](https://github.com/motdotla/dotenv/compare/v14.0.0...v14.0.1) (2022-01-16)
-
-### Added
-
-- Log error on failure to load `.env` file ([#594](https://github.com/motdotla/dotenv/pull/594))
-
-## [14.0.0](https://github.com/motdotla/dotenv/compare/v13.0.1...v14.0.0) (2022-01-16)
-
-### Added
-
-- _Breaking:_ Support inline comments for the parser 🎉 ([#568](https://github.com/motdotla/dotenv/pull/568))
-
-## [13.0.1](https://github.com/motdotla/dotenv/compare/v13.0.0...v13.0.1) (2022-01-16)
-
-### Changed
-
-* Hide comments and newlines from debug output ([#404](https://github.com/motdotla/dotenv/pull/404))
-
-## [13.0.0](https://github.com/motdotla/dotenv/compare/v12.0.4...v13.0.0) (2022-01-16)
-
-### Added
-
-* _Breaking:_ Add type file for `config.js` ([#539](https://github.com/motdotla/dotenv/pull/539))
-
-## [12.0.4](https://github.com/motdotla/dotenv/compare/v12.0.3...v12.0.4) (2022-01-16)
-
-### Changed
-
-* README updates
-* Minor order adjustment to package json format
-
-## [12.0.3](https://github.com/motdotla/dotenv/compare/v12.0.2...v12.0.3) (2022-01-15)
-
-### Changed
-
-* Simplified jsdoc for consistency across editors
-
-## [12.0.2](https://github.com/motdotla/dotenv/compare/v12.0.1...v12.0.2) (2022-01-15)
-
-### Changed
-
-* Improve embedded jsdoc type documentation
-
-## [12.0.1](https://github.com/motdotla/dotenv/compare/v12.0.0...v12.0.1) (2022-01-15)
-
-### Changed
-
-* README updates and clarifications
-
-## [12.0.0](https://github.com/motdotla/dotenv/compare/v11.0.0...v12.0.0) (2022-01-15)
-
-### Removed
-
-- _Breaking:_ drop support for Flow static type checker ([#584](https://github.com/motdotla/dotenv/pull/584))
-
-### Changed
-
-- Move types/index.d.ts to lib/main.d.ts ([#585](https://github.com/motdotla/dotenv/pull/585))
-- Typescript cleanup ([#587](https://github.com/motdotla/dotenv/pull/587))
-- Explicit typescript inclusion in package.json ([#566](https://github.com/motdotla/dotenv/pull/566))
-
-## [11.0.0](https://github.com/motdotla/dotenv/compare/v10.0.0...v11.0.0) (2022-01-11)
-
-### Changed
-
-- _Breaking:_ drop support for Node v10 ([#558](https://github.com/motdotla/dotenv/pull/558))
-- Patch debug option ([#550](https://github.com/motdotla/dotenv/pull/550))
-
-## [10.0.0](https://github.com/motdotla/dotenv/compare/v9.0.2...v10.0.0) (2021-05-20)
-
-### Added
-
-- Add generic support to parse function
-- Allow for import "dotenv/config.js"
-- Add support to resolve home directory in path via ~
-
-## [9.0.2](https://github.com/motdotla/dotenv/compare/v9.0.1...v9.0.2) (2021-05-10)
-
-### Changed
-
-- Support windows newlines with debug mode
-
-## [9.0.1](https://github.com/motdotla/dotenv/compare/v9.0.0...v9.0.1) (2021-05-08)
-
-### Changed
-
-- Updates to README
-
-## [9.0.0](https://github.com/motdotla/dotenv/compare/v8.6.0...v9.0.0) (2021-05-05)
-
-### Changed
-
-- _Breaking:_ drop support for Node v8
-
-## [8.6.0](https://github.com/motdotla/dotenv/compare/v8.5.1...v8.6.0) (2021-05-05)
-
-### Added
-
-- define package.json in exports
-
-## [8.5.1](https://github.com/motdotla/dotenv/compare/v8.5.0...v8.5.1) (2021-05-05)
-
-### Changed
-
-- updated dev dependencies via npm audit
-
-## [8.5.0](https://github.com/motdotla/dotenv/compare/v8.4.0...v8.5.0) (2021-05-05)
-
-### Added
-
-- allow for `import "dotenv/config"`
-
-## [8.4.0](https://github.com/motdotla/dotenv/compare/v8.3.0...v8.4.0) (2021-05-05)
-
-### Changed
-
-- point to exact types file to work with VS Code
-
-## [8.3.0](https://github.com/motdotla/dotenv/compare/v8.2.0...v8.3.0) (2021-05-05)
-
-### Changed
-
-- _Breaking:_ drop support for Node v8 (mistake to be released as minor bump. later bumped to 9.0.0. see above.)
-
-## [8.2.0](https://github.com/motdotla/dotenv/compare/v8.1.0...v8.2.0) (2019-10-16)
-
-### Added
-
-- TypeScript types
-
-## [8.1.0](https://github.com/motdotla/dotenv/compare/v8.0.0...v8.1.0) (2019-08-18)
-
-### Changed
-
-- _Breaking:_ drop support for Node v6 ([#392](https://github.com/motdotla/dotenv/issues/392))
-
-# [8.0.0](https://github.com/motdotla/dotenv/compare/v7.0.0...v8.0.0) (2019-05-02)
-
-### Changed
-
-- _Breaking:_ drop support for Node v6 ([#302](https://github.com/motdotla/dotenv/issues/392))
-
-## [7.0.0] - 2019-03-12
+- changed: refactored module exports [#5162](https://github.com/axios/axios/pull/5162)
+- change: re-added support for loading Axios with require('axios').default [#5225](https://github.com/axios/axios/pull/5225)
 
 ### Fixed
 
-- Fix removing unbalanced quotes ([#376](https://github.com/motdotla/dotenv/pull/376))
+- fix: improve AxiosHeaders class [#5224](https://github.com/axios/axios/pull/5224)
+- fix: TypeScript type definitions for commonjs [#5196](https://github.com/axios/axios/pull/5196)
+- fix: type definition of use method on AxiosInterceptorManager to match the the README [#5071](https://github.com/axios/axios/pull/5071)
+- fix: __dirname is not defined in the sandbox [#5269](https://github.com/axios/axios/pull/5269)
+- fix: AxiosError.toJSON method to avoid circular references [#5247](https://github.com/axios/axios/pull/5247)
+- fix: Z_BUF_ERROR when content-encoding is set but the response body is empty [#5250](https://github.com/axios/axios/pull/5250)
 
-### Removed
+### Refactors
+- refactor: allowing adapters to be loaded by name [#5277](https://github.com/axios/axios/pull/5277)
 
-- Removed `load` alias for `config` for consistency throughout code and documentation.
+### Chores
 
-## [6.2.0] - 2018-12-03
+- chore: force CI restart [#5243](https://github.com/axios/axios/pull/5243)
+- chore: update ECOSYSTEM.md [#5077](https://github.com/axios/axios/pull/5077)
+- chore: update get/index.html [#5116](https://github.com/axios/axios/pull/5116)
+- chore: update Sandbox UI/UX [#5205](https://github.com/axios/axios/pull/5205)
+- chore:(actions): remove git credentials after checkout [#5235](https://github.com/axios/axios/pull/5235)
+- chore(actions): bump actions/dependency-review-action from 2 to 3 [#5266](https://github.com/axios/axios/pull/5266)
+- chore(packages): bump loader-utils from 1.4.1 to 1.4.2 [#5295](https://github.com/axios/axios/pull/5295)
+- chore(packages): bump engine.io from 6.2.0 to 6.2.1 [#5294](https://github.com/axios/axios/pull/5294)
+- chore(packages): bump socket.io-parser from 4.0.4 to 4.0.5 [#5241](https://github.com/axios/axios/pull/5241)
+- chore(packages): bump loader-utils from 1.4.0 to 1.4.1 [#5245](https://github.com/axios/axios/pull/5245)
+- chore(docs): update Resources links in README [#5119](https://github.com/axios/axios/pull/5119)
+- chore(docs): update the link for JSON url [#5265](https://github.com/axios/axios/pull/5265)
+- chore(docs): fix broken links [#5218](https://github.com/axios/axios/pull/5218)
+- chore(docs): update and rename UPGRADE_GUIDE.md to MIGRATION_GUIDE.md [#5170](https://github.com/axios/axios/pull/5170)
+- chore(docs): typo fix line #856 and #920 [#5194](https://github.com/axios/axios/pull/5194)
+- chore(docs): typo fix #800 [#5193](https://github.com/axios/axios/pull/5193)
+- chore(docs): fix typos [#5184](https://github.com/axios/axios/pull/5184)
+- chore(docs): fix punctuation in README.md [#5197](https://github.com/axios/axios/pull/5197)
+- chore(docs): update readme in the Handling Errors section - issue reference #5260 [#5261](https://github.com/axios/axios/pull/5261)
+- chore: remove \b from filename [#5207](https://github.com/axios/axios/pull/5207)
+- chore(docs): update CHANGELOG.md [#5137](https://github.com/axios/axios/pull/5137)
+- chore: add sideEffects false to package.json [#5025](https://github.com/axios/axios/pull/5025)
+
+### Contributors to this release
+
+- [Maddy Miller](https://github.com/me4502)
+- [Amit Saini](https://github.com/amitsainii)
+- [ecyrbe](https://github.com/ecyrbe)
+- [Ikko Ashimine](https://github.com/eltociear)
+- [Geeth Gunnampalli](https://github.com/thetechie7)
+- [Shreem Asati](https://github.com/shreem-123)
+- [Frieder Bluemle](https://github.com/friederbluemle)
+- [윤세영](https://github.com/yunseyeong)
+- [Claudio Busatto](https://github.com/cjcbusatto)
+- [Remco Haszing](https://github.com/remcohaszing)
+- [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS)
+- [Csaba Maulis](https://github.com/om4csaba)
+- [MoPaMo](https://github.com/MoPaMo)
+- [Daniel Fjeldstad](https://github.com/w3bdesign)
+- [Adrien Brunet](https://github.com/adrien-may)
+- [Frazer Smith](https://github.com/Fdawgs)
+- [HaiTao](https://github.com/836334258)
+- [AZM](https://github.com/aziyatali)
+- [relbns](https://github.com/relbns)
+
+## [1.1.3] - 2022-10-15
 
 ### Added
 
-- Support preload configuration via environment variables ([#351](https://github.com/motdotla/dotenv/issues/351))
-
-## [6.1.0] - 2018-10-08
-
-### Added
-
-- `debug` option for `config` and `parse` methods will turn on logging
-
-## [6.0.0] - 2018-06-02
-
-### Changed
-
-- _Breaking:_ drop support for Node v4 ([#304](https://github.com/motdotla/dotenv/pull/304))
-
-## [5.0.0] - 2018-01-29
-
-### Added
-
-- Testing against Node v8 and v9
-- Documentation on trim behavior of values
-- Documentation on how to use with `import`
-
-### Changed
-
-- _Breaking_: default `path` is now `path.resolve(process.cwd(), '.env')`
-- _Breaking_: does not write over keys already in `process.env` if the key has a falsy value
-- using `const` and `let` instead of `var`
-
-### Removed
-
-- Testing against Node v7
-
-## [4.0.0] - 2016-12-23
-
-### Changed
-
-- Return Object with parsed content or error instead of false ([#165](https://github.com/motdotla/dotenv/pull/165)).
-
-### Removed
-
-- `verbose` option removed in favor of returning result.
-
-## [3.0.0] - 2016-12-20
-
-### Added
-
-- `verbose` option will log any error messages. Off by default.
-- parses email addresses correctly
-- allow importing config method directly in ES6
-
-### Changed
-
-- Suppress error messages by default ([#154](https://github.com/motdotla/dotenv/pull/154))
-- Ignoring more files for NPM to make package download smaller
+- Added custom params serializer support [#5113](https://github.com/axios/axios/pull/5113)
 
 ### Fixed
 
-- False positive test due to case-sensitive variable ([#124](https://github.com/motdotla/dotenv/pull/124))
+- Fixed top-level export to keep them in-line with static properties [#5109](https://github.com/axios/axios/pull/5109)
+- Stopped including null values to query string. [#5108](https://github.com/axios/axios/pull/5108)
+- Restored proxy config backwards compatibility with 0.x [#5097](https://github.com/axios/axios/pull/5097)
+- Added back AxiosHeaders in AxiosHeaderValue [#5103](https://github.com/axios/axios/pull/5103)
+- Pin CDN install instructions to a specific version [#5060](https://github.com/axios/axios/pull/5060)
+- Handling of array values fixed for AxiosHeaders [#5085](https://github.com/axios/axios/pull/5085)
 
-### Removed
+### Chores
 
-- `silent` option removed in favor of `verbose`
+- docs: match badge style, add link to them [#5046](https://github.com/axios/axios/pull/5046)
+- chore: fixing comments typo [#5054](https://github.com/axios/axios/pull/5054)
+- chore: update issue template [#5061](https://github.com/axios/axios/pull/5061)
+- chore: added progress capturing section to the docs; [#5084](https://github.com/axios/axios/pull/5084)
 
-## [2.0.0] - 2016-01-20
+### Contributors to this release
 
-### Added
+- [Jason Saayman](https://github.com/jasonsaayman)
+- [scarf](https://github.com/scarf005)
+- [Lenz Weber-Tronic](https://github.com/phryneas)
+- [Arvindh](https://github.com/itsarvindh)
+- [Félix Legrelle](https://github.com/FelixLgr)
+- [Patrick Petrovic](https://github.com/ppati000)
+- [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS)
+- [littledian](https://github.com/littledian)
+- [ChronosMasterOfAllTime](https://github.com/ChronosMasterOfAllTime)
 
-- CHANGELOG to ["make it easier for users and contributors to see precisely what notable changes have been made between each release"](http://keepachangelog.com/). Linked to from README
-- LICENSE to be more explicit about what was defined in `package.json`. Linked to from README
-- Testing nodejs v4 on travis-ci
-- added examples of how to use dotenv in different ways
-- return parsed object on success rather than boolean true
-
-### Changed
-
-- README has shorter description not referencing ruby gem since we don't have or want feature parity
-
-### Removed
-
-- Variable expansion and escaping so environment variables are encouraged to be fully orthogonal
-
-## [1.2.0] - 2015-06-20
-
-### Added
-
-- Preload hook to require dotenv without including it in your code
-
-### Changed
-
-- clarified license to be "BSD-2-Clause" in `package.json`
+## [1.1.2] - 2022-10-07
 
 ### Fixed
 
-- retain spaces in string vars
+- Fixed broken exports for UMD builds.
 
-## [1.1.0] - 2015-03-31
+### Contributors to this release
+
+- [Jason Saayman](https://github.com/jasonsaayman)
+
+## [1.1.1] - 2022-10-07
+
+### Fixed
+
+- Fixed broken exports for common js. This fix breaks a prior fix, I will fix both issues ASAP but the commonJS use is more impactful.
+
+### Contributors to this release
+
+- [Jason Saayman](https://github.com/jasonsaayman)
+
+## [1.1.0] - 2022-10-06
+
+### Fixed
+
+- Fixed missing exports in type definition index.d.ts [#5003](https://github.com/axios/axios/pull/5003)
+- Fixed query params composing [#5018](https://github.com/axios/axios/pull/5018)
+- Fixed GenericAbortSignal interface by making it more generic [#5021](https://github.com/axios/axios/pull/5021)
+- Fixed adding "clear" to AxiosInterceptorManager [#5010](https://github.com/axios/axios/pull/5010)
+- Fixed commonjs & umd exports [#5030](https://github.com/axios/axios/pull/5030)
+- Fixed inability to access response headers when using axios 1.x with Jest [#5036](https://github.com/axios/axios/pull/5036)
+
+### Contributors to this release
+
+- [Trim21](https://github.com/trim21)
+- [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS)
+- [shingo.sasaki](https://github.com/s-sasaki-0529)
+- [Ivan Pepelko](https://github.com/ivanpepelko)
+- [Richard Kořínek](https://github.com/risa)
+
+## [1.0.0] - 2022-10-04
 
 ### Added
 
-- Silent option to silence `console.log` when `.env` missing
+- Added stack trace to AxiosError [#4624](https://github.com/axios/axios/pull/4624)
+- Add AxiosError to AxiosStatic [#4654](https://github.com/axios/axios/pull/4654)
+- Replaced Rollup as our build runner [#4596](https://github.com/axios/axios/pull/4596)
+- Added generic TS types for the exposed toFormData helper [#4668](https://github.com/axios/axios/pull/4668)
+- Added listen callback function [#4096](https://github.com/axios/axios/pull/4096)
+- Added instructions for installing using PNPM [#4207](https://github.com/axios/axios/pull/4207)
+- Added generic AxiosAbortSignal TS interface to avoid importing AbortController polyfill [#4229](https://github.com/axios/axios/pull/4229)
+- Added axios-url-template in ECOSYSTEM.md [#4238](https://github.com/axios/axios/pull/4238)
+- Added a clear() function to the request and response interceptors object so a user can ensure that all interceptors have been removed from an axios instance [#4248](https://github.com/axios/axios/pull/4248)
+- Added react hook plugin [#4319](https://github.com/axios/axios/pull/4319)
+- Adding HTTP status code for transformResponse [#4580](https://github.com/axios/axios/pull/4580)
+- Added blob to the list of protocols supported by the browser [#4678](https://github.com/axios/axios/pull/4678)
+- Resolving proxy from env on redirect [#4436](https://github.com/axios/axios/pull/4436)
+- Added enhanced toFormData implementation with additional options [4704](https://github.com/axios/axios/pull/4704)
+- Adding Canceler parameters config and request [#4711](https://github.com/axios/axios/pull/4711)
+- Added automatic payload serialization to application/x-www-form-urlencoded [#4714](https://github.com/axios/axios/pull/4714)
+- Added the ability for webpack users to overwrite built-ins [#4715](https://github.com/axios/axios/pull/4715)
+- Added string[] to AxiosRequestHeaders type [#4322](https://github.com/axios/axios/pull/4322)
+- Added the ability for the url-encoded-form serializer to respect the formSerializer config [#4721](https://github.com/axios/axios/pull/4721)
+- Added isCancel type assert [#4293](https://github.com/axios/axios/pull/4293)
+- Added data URL support for node.js [#4725](https://github.com/axios/axios/pull/4725)
+- Adding types for progress event callbacks [#4675](https://github.com/axios/axios/pull/4675)
+- URL params serializer [#4734](https://github.com/axios/axios/pull/4734)
+- Added axios.formToJSON method [#4735](https://github.com/axios/axios/pull/4735)
+- Bower platform add data protocol [#4804](https://github.com/axios/axios/pull/4804)
+- Use WHATWG URL API instead of url.parse() [#4852](https://github.com/axios/axios/pull/4852)
+- Add ENUM containing Http Status Codes to typings [#4903](https://github.com/axios/axios/pull/4903)
+- Improve typing of timeout in index.d.ts [#4934](https://github.com/axios/axios/pull/4934)
 
-## [1.0.0] - 2015-03-13
+### Changed
+
+- Updated AxiosError.config to be optional in the type definition [#4665](https://github.com/axios/axios/pull/4665)
+- Updated README emphasizing the URLSearchParam built-in interface over other solutions [#4590](https://github.com/axios/axios/pull/4590)
+- Include request and config when creating a CanceledError instance [#4659](https://github.com/axios/axios/pull/4659)
+- Changed func-names eslint rule to as-needed [#4492](https://github.com/axios/axios/pull/4492)
+- Replacing deprecated substr() with slice() as substr() is deprecated [#4468](https://github.com/axios/axios/pull/4468)
+- Updating HTTP links in README.md to use HTTPS [#4387](https://github.com/axios/axios/pull/4387)
+- Updated to a better trim() polyfill [#4072](https://github.com/axios/axios/pull/4072)
+- Updated types to allow specifying partial default headers on instance create [#4185](https://github.com/axios/axios/pull/4185)
+- Expanded isAxiosError types [#4344](https://github.com/axios/axios/pull/4344)
+- Updated type definition for axios instance methods [#4224](https://github.com/axios/axios/pull/4224)
+- Updated eslint config [#4722](https://github.com/axios/axios/pull/4722)
+- Updated Docs [#4742](https://github.com/axios/axios/pull/4742)
+- Refactored Axios to use ES2017 [#4787](https://github.com/axios/axios/pull/4787)
+
+
+### Deprecated
+- There are multiple deprecations, refactors and fixes provided in this release. Please read through the full release notes to see how this may impact your project and use case.
 
 ### Removed
 
-- support for multiple `.env` files. should always use one `.env` file for the current environment
+- Removed incorrect argument for NetworkError constructor [#4656](https://github.com/axios/axios/pull/4656)
+- Removed Webpack [#4596](https://github.com/axios/axios/pull/4596)
+- Removed function that transform arguments to array [#4544](https://github.com/axios/axios/pull/4544)
 
-[7.0.0]: https://github.com/motdotla/dotenv/compare/v6.2.0...v7.0.0
-[6.2.0]: https://github.com/motdotla/dotenv/compare/v6.1.0...v6.2.0
-[6.1.0]: https://github.com/motdotla/dotenv/compare/v6.0.0...v6.1.0
-[6.0.0]: https://github.com/motdotla/dotenv/compare/v5.0.0...v6.0.0
-[5.0.0]: https://github.com/motdotla/dotenv/compare/v4.0.0...v5.0.0
-[4.0.0]: https://github.com/motdotla/dotenv/compare/v3.0.0...v4.0.0
-[3.0.0]: https://github.com/motdotla/dotenv/compare/v2.0.0...v3.0.0
-[2.0.0]: https://github.com/motdotla/dotenv/compare/v1.2.0...v2.0.0
-[1.2.0]: https://github.com/motdotla/dotenv/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/motdotla/dotenv/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/motdotla/dotenv/compare/v0.4.0...v1.0.0
+### Fixed
+
+- Fixed grammar in README [#4649](https://github.com/axios/axios/pull/4649)
+- Fixed code error in README [#4599](https://github.com/axios/axios/pull/4599)
+- Optimized the code that checks cancellation [#4587](https://github.com/axios/axios/pull/4587)
+- Fix url pointing to defaults.js in README [#4532](https://github.com/axios/axios/pull/4532)
+- Use type alias instead of interface for AxiosPromise [#4505](https://github.com/axios/axios/pull/4505)
+- Fix some word spelling and lint style in code comments [#4500](https://github.com/axios/axios/pull/4500)
+- Edited readme with 3 updated browser icons of Chrome, FireFox and Safari [#4414](https://github.com/axios/axios/pull/4414)
+- Bump follow-redirects from 1.14.9 to 1.15.0 [#4673](https://github.com/axios/axios/pull/4673)
+- Fixing http tests to avoid hanging when assertions fail [#4435](https://github.com/axios/axios/pull/4435)
+- Fix TS definition for AxiosRequestTransformer [#4201](https://github.com/axios/axios/pull/4201)
+- Fix grammatical issues in README [#4232](https://github.com/axios/axios/pull/4232)
+- Fixing instance.defaults.headers type [#4557](https://github.com/axios/axios/pull/4557)
+- Fixed race condition on immediate requests cancellation [#4261](https://github.com/axios/axios/pull/4261)
+- Fixing Z_BUF_ERROR when no content [#4701](https://github.com/axios/axios/pull/4701)
+- Fixing proxy beforeRedirect regression [#4708](https://github.com/axios/axios/pull/4708)
+- Fixed AxiosError status code type [#4717](https://github.com/axios/axios/pull/4717)
+- Fixed AxiosError stack capturing [#4718](https://github.com/axios/axios/pull/4718)
+- Fixing AxiosRequestHeaders typings [#4334](https://github.com/axios/axios/pull/4334)
+- Fixed max body length defaults [#4731](https://github.com/axios/axios/pull/4731)
+- Fixed toFormData Blob issue on node>v17 [#4728](https://github.com/axios/axios/pull/4728)
+- Bump grunt from 1.5.2 to 1.5.3 [#4743](https://github.com/axios/axios/pull/4743)
+- Fixing content-type header repeated [#4745](https://github.com/axios/axios/pull/4745)
+- Fixed timeout error message for http [4738](https://github.com/axios/axios/pull/4738)
+- Request ignores false, 0 and empty string as body values [#4785](https://github.com/axios/axios/pull/4785)
+- Added back missing minified builds [#4805](https://github.com/axios/axios/pull/4805)
+- Fixed a type error [#4815](https://github.com/axios/axios/pull/4815)
+- Fixed a regression bug with unsubscribing from cancel token; [#4819](https://github.com/axios/axios/pull/4819)
+- Remove repeated compression algorithm [#4820](https://github.com/axios/axios/pull/4820)
+- The error of calling extend to pass parameters [#4857](https://github.com/axios/axios/pull/4857)
+- SerializerOptions.indexes allows boolean | null | undefined [#4862](https://github.com/axios/axios/pull/4862)
+- Require interceptors to return values [#4874](https://github.com/axios/axios/pull/4874)
+- Removed unused imports [#4949](https://github.com/axios/axios/pull/4949)
+- Allow null indexes on formSerializer and paramsSerializer [#4960](https://github.com/axios/axios/pull/4960)
+
+### Chores
+- Set permissions for GitHub actions [#4765](https://github.com/axios/axios/pull/4765)
+- Included githubactions in the dependabot config [#4770](https://github.com/axios/axios/pull/4770)
+- Included dependency review [#4771](https://github.com/axios/axios/pull/4771)
+- Update security.md [#4784](https://github.com/axios/axios/pull/4784)
+- Remove unnecessary spaces [#4854](https://github.com/axios/axios/pull/4854)
+- Simplify the import path of AxiosError [#4875](https://github.com/axios/axios/pull/4875)
+- Fix Gitpod dead link [#4941](https://github.com/axios/axios/pull/4941)
+- Enable syntax highlighting for a code block [#4970](https://github.com/axios/axios/pull/4970)
+- Using Logo Axios in Readme.md [#4993](https://github.com/axios/axios/pull/4993)
+- Fix markup for note in README [#4825](https://github.com/axios/axios/pull/4825)
+- Fix typo and formatting, add colons [#4853](https://github.com/axios/axios/pull/4853)
+- Fix typo in readme [#4942](https://github.com/axios/axios/pull/4942)
+
+### Security
+
+- Update SECURITY.md [#4687](https://github.com/axios/axios/pull/4687)
+
+### Contributors to this release
+
+- [Bertrand Marron](https://github.com/tusbar)
+- [Dmitriy Mozgovoy](https://github.com/DigitalBrainJS)
+- [Dan Mooney](https://github.com/danmooney)
+- [Michael Li](https://github.com/xiaoyu-tamu)
+- [aong](https://github.com/yxwzaxns)
+- [Des Preston](https://github.com/despreston)
+- [Ted Robertson](https://github.com/tredondo)
+- [zhoulixiang](https://github.com/zh-lx)
+- [Arthur Fiorette](https://github.com/arthurfiorette)
+- [Kumar Shanu](https://github.com/Kr-Shanu)
+- [JALAL](https://github.com/JLL32)
+- [Jingyi Lin](https://github.com/MageeLin)
+- [Philipp Loose](https://github.com/phloose)
+- [Alexander Shchukin](https://github.com/sashsvamir)
+- [Dave Cardwell](https://github.com/davecardwell)
+- [Cat Scarlet](https://github.com/catscarlet)
+- [Luca Pizzini](https://github.com/lpizzinidev)
+- [Kai](https://github.com/Schweinepriester)
+- [Maxime Bargiel](https://github.com/mbargiel)
+- [Brian Helba](https://github.com/brianhelba)
+- [reslear](https://github.com/reslear)
+- [Jamie Slome](https://github.com/JamieSlome)
+- [Landro3](https://github.com/Landro3)
+- [rafw87](https://github.com/rafw87)
+- [Afzal Sayed](https://github.com/afzalsayed96)
+- [Koki Oyatsu](https://github.com/kaishuu0123)
+- [Dave](https://github.com/wangcch)
+- [暴走老七](https://github.com/baozouai)
+- [Spencer](https://github.com/spalger)
+- [Adrian Wieprzkowicz](https://github.com/Argeento)
+- [Jamie Telin](https://github.com/lejahmie)
+- [毛呆](https://github.com/aweikalee)
+- [Kirill Shakirov](https://github.com/turisap)
+- [Rraji Abdelbari](https://github.com/estarossa0)
+- [Jelle Schutter](https://github.com/jelleschutter)
+- [Tom Ceuppens](https://github.com/KyorCode)
+- [Johann Cooper](https://github.com/JohannCooper)
+- [Dimitris Halatsis](https://github.com/mitsos1os)
+- [chenjigeng](https://github.com/chenjigeng)
+- [João Gabriel Quaresma](https://github.com/joaoGabriel55)
+- [Victor Augusto](https://github.com/VictorAugDB)
+- [neilnaveen](https://github.com/neilnaveen)
+- [Pavlos](https://github.com/psmoros)
+- [Kiryl Valkovich](https://github.com/visortelle)
+- [Naveen](https://github.com/naveensrinivasan)
+- [wenzheng](https://github.com/0x30)
+- [hcwhan](https://github.com/hcwhan)
+- [Bassel Rachid](https://github.com/basselworkforce)
+- [Grégoire Pineau](https://github.com/lyrixx)
+- [felipedamin](https://github.com/felipedamin)
+- [Karl Horky](https://github.com/karlhorky)
+- [Yue JIN](https://github.com/kingyue737)
+- [Usman Ali Siddiqui](https://github.com/usman250994)
+- [WD](https://github.com/techbirds)
+- [Günther Foidl](https://github.com/gfoidl)
+- [Stephen Jennings](https://github.com/jennings)
+- [C.T.Lin](https://github.com/chentsulin)
+- [mia-z](https://github.com/mia-z)
+- [Parth Banathia](https://github.com/Parth0105)
+- [parth0105pluang](https://github.com/parth0105pluang)
+- [Marco Weber](https://github.com/mrcwbr)
+- [Luca Pizzini](https://github.com/lpizzinidev)
+- [Willian Agostini](https://github.com/WillianAgostini)
+- [Huyen Nguyen](https://github.com/huyenltnguyen)

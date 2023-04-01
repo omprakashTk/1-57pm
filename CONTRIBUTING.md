@@ -1,25 +1,52 @@
 # Contributing
 
-1. [Fork it](https://help.github.com/articles/fork-a-repo/)
-2. Install dependencies (`npm install`)
-3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Added some feature'`)
-5. Test your changes (`npm test`)
-6. Push to the branch (`git push origin my-new-feature`)
-7. [Create new Pull Request](https://help.github.com/articles/creating-a-pull-request/)
-
-## Testing
-
-We use [TAP](https://github.com/tapjs/node-tap) to write tests. Run our test suite with this command:
-
-```
-npm test
-```
+We are open to, and grateful for, any contributions made by the community. By contributing to axios, you agree to abide by the [code of conduct](https://github.com/axios/axios/blob/master/CODE_OF_CONDUCT.md).
 
 ## Code Style
 
-We use [standard](https://www.npmjs.com/package/standard) and [editorconfig](http://editorconfig.org) to maintain code style and best practices. Please make sure your PR adheres to the guides by running:
+Please follow the [node style guide](https://github.com/felixge/node-style-guide).
 
+## Commit Messages
+
+Please follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+## Testing
+
+Please update the tests to reflect your code changes. Pull requests will not be accepted if they are failing on GitHub actions.
+
+## Documentation
+
+Please update the [docs](README.md) accordingly so that there are no discrepancies between the API and the documentation.
+
+## Developing
+
+- `grunt test` run the jasmine and mocha tests
+- `grunt build` run webpack and bundle the source
+- `grunt version` prepare the code for release
+
+Please don't include changes to `dist/` in your pull request. This should only be updated when releasing a new version.
+
+## Running Examples
+
+Examples are included in part to allow manual testing.
+
+Running example
+
+```bash
+> npm run examples
+# Open 127.0.0.1:3000
 ```
-npm run lint
+
+Running sandbox in browser
+
+```bash
+> npm start
+# Open 127.0.0.1:3000
+```
+
+Running sandbox in terminal
+
+```bash
+> npm start
+> node ./sandbox/client
 ```
